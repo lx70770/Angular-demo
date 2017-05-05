@@ -8,7 +8,7 @@ import {FormControl, FormGroup, FormArray} from "@angular/forms";
 })
 export class ReactiveFormComponent implements OnInit {
 
-  formModul:FormGroup = new FormGroup({
+  formModule:FormGroup = new FormGroup({
     dateRange:new FormGroup({
       from:new FormControl("dang"),
       to:new FormControl("ding")
@@ -26,11 +26,11 @@ export class ReactiveFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.formModul.value);
+    console.log(this.formModule.value);
   }
-
+e
   addEmail() {
-    let emails = this.formModul.get("emails") as FormArray;
+    let emails = this.formModule.get("emails") as FormArray;
     emails.push(new FormControl());
   }
 
